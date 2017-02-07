@@ -41,3 +41,27 @@ if F(x) = P(X < x):
     P(a < X <= b) = F(b) - F(a)
 
 """
+
+"""
+negative binomial experiment
+A negative binomial experiment is a statistical experiment that has the following properties:
+The experiment consists of n repeated trials.
+The trials are independent.
+The outcome of each trial is either success with probabbility p or failure with q.
+p is the same for every trial.
+The experiment continues until x successes are observed.
+
+If x is the number of experiments until the  success occurs, then X is a discrete random variable
+called a negative binomial.
+
+b*(x,n,p) = (n-1)C(x-1) *  p^x * q^(n-x)
+
+negative binomial probability  meaning the probability of having x-1 successes after n-1 trials and
+having x successes after n trials.
+
+The geometric distribution is a special case of the negative binomial distribution that deals with
+the number of Bernoulli trials required to get a success
+(i.e., counting the number of failures before the first success)
+
+g(n,p) = p * q^(n-1)
+"""
