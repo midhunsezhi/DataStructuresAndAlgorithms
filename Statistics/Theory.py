@@ -65,3 +65,14 @@ the number of Bernoulli trials required to get a success
 
 g(n,p) = p * q^(n-1)
 """
+
+"""
+for a specified region P(l) is the Poisson probability,
+which is the probability of getting exactly k successes
+when the average number of successes is l.
+
+P(l) = (l ^ k) * e ^ (-l) / k!
+
+Special case: if expectation of poisson random variable is E[X],
+E[X^2] = l + l^2
+"""
