@@ -52,4 +52,17 @@ class Tree:
 	def is_empty(self):
 		return len(self) == 0
 
+	def depth(self, p):
+		if self.is_root(p):
+			return 0
+		return 1 + depth(self.parent(p))
+
+	def height(self, p=None):
+		if p is None:
+			p = self.root()
+		if self.is_leaf(p):
+			return 0
+		return 1 + max(height(c) for c in self.children(p))
+
+
 
