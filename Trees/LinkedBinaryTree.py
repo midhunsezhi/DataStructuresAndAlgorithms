@@ -36,3 +36,39 @@ class LinkedBinaryTree(BinaryTree):
 	def _make_position(self, node):
 		"""Return position instance of given node"""
 		return self.Position(self, node) if node is not None else None
+
+	#------------ binary tree constructor ----------------#
+
+	def __init__(self):
+		"""create an initially empty binary tree"""
+		self._root = None
+		self._size = 0
+
+	#-------------- public accessors ----------------
+	def __len__(self):
+		return self._size
+
+	def root(self):
+		return self._make_position(self._root)
+
+	def parent(self, p):
+		node = self._validate(p)
+		return self._make_position(node._parent)
+
+	def left(self, p):
+		node = self._validate(p)
+		return self._make_position(node._left)
+
+	def right(self, p):
+		node = self._validate(p)
+		return self._make_position(node._right)
+
+	def num_children(self, p):
+		node = self._validate(p)
+		count = 0
+		if self.left(p) is not None:
+			count += 1
+		if self.right(p) is not None:
+			count += 1
+
+		return count
